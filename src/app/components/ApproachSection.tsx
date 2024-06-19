@@ -41,7 +41,7 @@ const ApproachSection = () => {
   return (
     <div className="w-full bg-[#f9f4e4] py-16">
       <div className="max-w-[95rem] mx-auto p-8">
-        <h2 className="text-3xl font-bold mb-6 text-left text-[#8b6e34]">Our Approach to Dental Care</h2>
+        <h2 className="text-4xl font-bold mb-6 text-left text-[#8b6e34]">Our Approach to Dental Care</h2>
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="flex items-stretch">
             <img

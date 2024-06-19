@@ -1,7 +1,10 @@
 import React from 'react';
 import ApproachSection from './components/ApproachSection';
+import ApproachSection2 from './components/ApproachSection2';
+// import Teeth from './components/teeth';
+import dynamic from 'next/dynamic';
+const Teeth = dynamic(() => import('./components/Teeth'), { ssr: false });
 import { FaPhoneVolume, FaRegCalendarCheck } from "react-icons/fa";
-import { CiMenuBurger } from "react-icons/ci";
 import { IoIosMenu } from "react-icons/io";
 
 const HomePage: React.FC = () => {
@@ -78,7 +81,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        <section className="w-full py-32 px-8 mb-8">
+        <section className="w-full py-32 px-8">
           <div className="max-w-[95rem] mx-auto flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 flex justify-center mb-8 lg:mb-0 lg:pr-8">
               <img src="/images/d8.png" alt="About Our Dental Services" className="rounded-lg shadow-md" />
@@ -94,9 +97,11 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         <ApproachSection />
+        <ApproachSection2/>
+        <Teeth/>
 
 
-      <footer className="bg-blue-600 w-full py-4 mt-10">
+      <footer className="bg-blue-600 w-full py-4">
         <p className="text-white text-center">&copy; 2024 4405 Dental Studio. All rights reserved.</p>
       </footer>
     </div>
