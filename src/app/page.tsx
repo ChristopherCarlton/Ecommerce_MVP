@@ -128,9 +128,9 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-700 mb-6">
               Call us today to secure your appointment slot and experience compassionate dental care tailored just for you with our dentist!
             </p>
-            <button className="bg-[#8b6e34] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#6b5525] transition-colors duration-300">
+            <a href='/Book-Now' className="bg-[#8b6e34] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#6b5525] transition-colors duration-300">
               Book Now
-            </button>
+            </a>
           </div>
         </div>
       </section>
