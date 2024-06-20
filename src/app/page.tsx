@@ -1,39 +1,17 @@
 import React from 'react';
 import ApproachSection from './components/ApproachSection';
 import ApproachSection2 from './components/ApproachSection2';
-// import Teeth from './components/teeth';
+import MeetTheDoctors from './components/MeetTheDoctors';
 import dynamic from 'next/dynamic';
 const Teeth = dynamic(() => import('./components/Teeth'), { ssr: false });
-import { FaPhoneVolume, FaRegCalendarCheck } from "react-icons/fa";
-import { IoIosMenu } from "react-icons/io";
+import Comprehensive from './components/Comprehensive';
+import SuccessStories from './components/SuccessStories';
+import Video from './components/Video';
 
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center">
-
-     <header className="bg-black w-full py-4 fixed top-0 z-50">
-          <nav className="flex justify-between px-2 w-full mx-auto items-center">
-            <div className="flex">
-              <img src="/images/h1.png" alt="4405 Dental Studio" className="pl-8 h-[170px]" />
-            </div>
-            <div className="flex px-8">
-              <div className="flex flex-col text-white text-right space-y-4 pr-4">
-                <div className="flex items-center justify-end text-lg">
-                  <FaPhoneVolume className="text-xl" />
-                  <span className="pl-2">Phone: (512) 686-2525</span>
-                </div>
-                <div className="flex items-center  text-lg">
-                  <FaRegCalendarCheck className="text-xl" />
-                  <span className="pl-2">Book Now</span>
-                </div>
-              </div>
-              <button className="text-white self-end">
-                  <IoIosMenu className="text-5xl" />
-                </button>
-            </div>
-          </nav>
-        </header>
-
+        <Video/>
         <section className="w-full py-32 px-8 mb-8">
           <div className="max-w-[95rem] mx-auto flex flex-col lg:flex-row items-center lg:items-stretch">
             <div className="bg-[#f9f4e4] lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 p-8 flex flex-col justify-between">
@@ -99,11 +77,63 @@ const HomePage: React.FC = () => {
         <ApproachSection />
         <ApproachSection2/>
         <Teeth/>
+        <MeetTheDoctors/>
 
-
-      <footer className="bg-blue-600 w-full py-4">
-        <p className="text-white text-center">&copy; 2024 4405 Dental Studio. All rights reserved.</p>
-      </footer>
+        <section className="w-full bg-white py-16">
+        <div className="max-w-[95rem] mx-auto p-8 flex flex-col md:flex-row items-center justify-between">
+          <div className="bg-[#f9f4e4] p-8 rounded-md shadow-md md:w-1/2">
+            <h2 className="text-4xl font-bold mb-4 text-[#8b6e34]">How Can We Help?</h2>
+            <div className="flex items-center">
+              <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#8b6e34]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.09A10 10 0 015 8.6M12 14l-6.16 3.09A10 10 0 0112 21M5.4 15.6a10 10 0 01-.4-7.6" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl text-[#8b6e34] font-bold mb-2">Your Comfort Comes First</h3>
+                <p className="text-lg text-gray-700">
+                  Whether you need extensive restorative work, cosmetic enhancements, or just a check-up and cleaning, you can count on Dr. Edmonds and his team.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8">
+            <img
+              src="/images/d11.png"
+              alt="Happy couple"
+              className="rounded-md shadow-md w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <Comprehensive/>
+      <SuccessStories/>
+      <section className="w-full bg-[#f9f4e4] py-16">
+        <div className="max-w-[95rem] mx-auto p-8 flex flex-col lg:flex-row items-center justify-between">
+          <div className="lg:w-1/2">
+            <img
+              src="/images/d15.png"
+              alt="Happy couple"
+              className="w-full h-full object-cover rounded-md shadow-md"
+            />
+          </div>
+          <div className="lg:w-1/2 bg-white p-8 rounded-md shadow-md mt-8 lg:mt-0 lg:ml-8">
+            <h2 className="text-3xl font-bold text-[#8b6e34] mb-4">Let’s Get Your Smile Back in Shape: Schedule Your First Visit Today!</h2>
+            <p className="text-lg text-gray-700 mb-4">
+              Ready to take the next step in your dental health journey? Whether it’s for general, cosmetic, or emergency care, our team is prepared to provide top-notch services that cater to your unique needs.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              With an individualized approach to dentistry and modern technology at our fingertips, we’ll ensure you receive the comprehensive care necessary to keep your smile bright and healthy.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Call us today to secure your appointment slot and experience compassionate dental care tailored just for you with our dentist!
+            </p>
+            <button className="bg-[#8b6e34] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#6b5525] transition-colors duration-300">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
