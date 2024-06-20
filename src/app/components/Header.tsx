@@ -43,11 +43,13 @@ export default function Header() {
             isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
+          <a href="/">
           <img
             src="/images/h1.png"
             alt="4405 Dental Studio"
             className="pl-4 pt-2 h-[170px]"
           />
+          </a>
         </div>
         <div className="flex px-8">
           <div

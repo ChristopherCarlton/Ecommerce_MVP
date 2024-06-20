@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 
-const Teeth: React.FC = () => {
+export const Teeths2: React.FC = () => {
   const initialSliderPositions = [50, 50, 50, 50];
   const [sliderPositions, setSliderPositions] = useState<number[]>(initialSliderPositions);
 
@@ -12,25 +12,22 @@ const Teeth: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-white py-16">
-      <div className="max-w-[95rem] mx-auto p-8 text-center">
-        <h2 className="text-4xl font-bold mb-4 text-[#8b6e34]">Stunning Smiles Start Here</h2>
-        <p className="text-xl text-gray-700 mb-8">
-          Do you want to enjoy <span className="font-semibold">exceptional oral health and an amazing smile</span> that you can show off with pride? Just give us a call and schedule an in-person appointment to get started.
-        </p>
+    <div className="w-full bg-[#f9f4e4] py-16">
+      <div className="max-w-[95rem] mx-auto p-8 text-start">
+        <h3 className="text-xl text-black font-bold mb-8">Venners Case 02 Before and After</h3>
         <div className="flex justify-center gap-4">
-          {[1, 2, 3, 4].map((i) => (
+          {[0, 1, 2, 3].map((i) => (
             <div key={i} className="relative w-64 h-64 overflow-hidden rounded-md">
               <div className="absolute inset-0">
                 <img
-                  src={`/images/teeth${i}.png`}
-                  alt={`Teeth ${i}`}
+                  src={`/images/vc${i + 1}.png`}
+                  alt={`Teeth ${i + 1}`}
                   className="absolute top-0 left-0 w-full h-full object-cover"
                   style={{ clipPath: `polygon(0 0, ${sliderPositions[i]}% 0, ${sliderPositions[i]}% 100%, 0 100%)` }}
                 />
                 <img
-                  src={`/images/teeth${i}white.png`}
-                  alt={`Teeth ${i} White`}
+                  src={`/images/vc${i + 1}a.png`}
+                  alt={`Teeth ${i + 1} After`}
                   className="absolute top-0 left-0 w-full h-full object-cover"
                   style={{ clipPath: `polygon(${sliderPositions[i]}% 0, 100% 0, 100% 100%, ${sliderPositions[i]}% 100%)` }}
                 />
@@ -46,13 +43,17 @@ const Teeth: React.FC = () => {
               />
             </div>
           ))}
+          <div className="relative w-64 h-64 overflow-hidden rounded-md">
+            <img
+              src={`/images/v.png`}
+              alt={`Teeth 5`}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
-        <button className="mt-8 bg-[#8b6e34] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#6b5525] transition-colors duration-300">
-           <a href='/gallery'>Gallery</a>
-        </button>
       </div>
     </div>
   );
 };
 
-export default Teeth;
+export default Teeths2;
