@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        <section className="w-full py-32 px-8 " style={{ backgroundColor: '#b89c54' }}>
+        <section className="w-full py-32 px-8 " style={{ backgroundColor: '#8f7c54' }}>
           <div className="max-w-[95rem] mx-auto flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 flex justify-center mb-8 lg:mb-0 lg:pr-8">
               <img src="/images/d7.png" alt="Our Mission" className="rounded-lg shadow-md" />
