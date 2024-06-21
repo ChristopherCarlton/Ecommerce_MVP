@@ -1,12 +1,11 @@
 import React from 'react';
+import HeaderPage from '../components/HeaderPage';
 
 const MeetDoctor: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <div className="bg-gray-900 text-white py-52">
-        <h1 className="text-5xl font-bold text-center">Meet Dr. Andrew Edmonds</h1>
-      </div>
+      <HeaderPage title='Meet DR. ANDREW EDMONDS'/>
       <main className="flex flex-col items-center mt-32 px-4 w-full">
         <section className="w-full py-16">
           <div className="max-w-[95rem] mx-auto grid lg:grid-cols-2 gap-8 items-center">

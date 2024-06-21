@@ -1,13 +1,13 @@
 "use client";
 import React from 'react';
+import HeaderPage from '../components/HeaderPage';
 
 const AppointmentForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <div className="bg-gray-900 text-white py-52 w-full">
-        <h1 className="text-5xl font-bold text-center">Non-Cleaning Appointments</h1>
-      </div>
+      <HeaderPage title='Non-Cleaning Appointments'/>
+      
 
       {/* Form Section */}
       <div className="bg-white p-16 rounded-lg shadow-lg w-full max-w-4xl mt-16 mx-auto ">
