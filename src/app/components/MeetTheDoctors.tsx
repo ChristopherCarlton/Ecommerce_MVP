@@ -23,7 +23,7 @@ const MeetTheDoctors: React.FC = () => {
                 <img src="/images/affiliation4.png" alt="Affiliation 4" className="w-24 h-24" />
                 </div>
                 <button className="mt-4 bg-[#8b6e34] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#6b5525] transition-colors duration-300">
-                Read More
+                  <a href='/meet-dr-andrew-edmonds'>Read More</a>
                 </button>
             </div>
             
@@ -44,7 +44,7 @@ const MeetTheDoctors: React.FC = () => {
                 <img src="/images/affiliation4.png" alt="Affiliation 4" className="w-24 h-24" />
                 </div>
                 <button className="mt-4 bg-[#8b6e34] text-white py-2 px-4 rounded-md shadow-md hover:bg-[#6b5525] transition-colors duration-300">
-                Read More
+                  <a href='/meet-dr-brenna-sura'>Read More</a>
                 </button>
             </div>
           </div>

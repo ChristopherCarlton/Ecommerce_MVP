@@ -39,7 +39,7 @@ const SuccessStories: React.FC = () => {
 
   return (
     <section className="w-full bg-white py-44">
-      <div className="max-w-[95rem] mx-auto p-32 text-center text-white relative bg-[#8b6e34] rounded-md shadow-md">
+      <div className="max-w-[95rem] mx-auto p-32 text-center text-white relative bg-[#8f7c54] rounded-md shadow-md">
         <h2 className="text-4xl font-bold mb-4">Success Stories</h2>
         <p className="text-xl mb-8">{currentStory.text}</p>
         <p className="text-lg">{currentStory.author}</p>
