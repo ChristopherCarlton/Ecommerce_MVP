@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Menu: React.FC = () => {
-  const [view, setView] = useState<'main' | 'about'>('main');
+  const [view, setView] = useState<'main' | 'about' | 'patient-center' | 'services'>('main');
 
   return (
     <div
@@ -21,18 +21,20 @@ const Menu: React.FC = () => {
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
             About
           </button>
-          <a href="#services" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
+          <button
+            onClick={() => setView('services')}
+            className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left"
+          >
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
             Services
-          </a>
-          <a href="#patient-center" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
+          </button>
+          <button
+            onClick={() => setView('patient-center')}
+            className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left"
+          >
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
             Patient Center
-          </a>
-          <a href="#blog" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
-            <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
-            Blog
-          </a>
+          </button>
           <a href="/contact-us" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
             Contact Us
@@ -41,7 +43,7 @@ const Menu: React.FC = () => {
             (512) 686-2525
           </a>
         </>
-      ) : (
+      ) : view === 'about' ? (
         <>
           <button
             onClick={() => setView('main')}
@@ -62,22 +64,34 @@ const Menu: React.FC = () => {
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
             Before & After
           </a>
-          {/* <a href="#team" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
+        </>
+      ) : view === 'services' ? (
+        <>
+          <button
+            onClick={() => setView('main')}
+            className="relative text-xl w-64 px-14 py-4 rounded-md bg-[#c5a46d] text-left"
+          >
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
-            Meet The Team
+            Back
+          </button>
+          <a href="/dental-veneers" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
+            <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
+            Dental Veneers
           </a>
-          <a href="#success-stories" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
+        </>
+      ) : (
+        <>
+          <button
+            onClick={() => setView('main')}
+            className="relative text-xl w-64 px-14 py-4 rounded-md bg-[#c5a46d] text-left"
+          >
             <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
-            Success Stories
+            Back
+          </button>
+          <a href="/Book-Now" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
+            <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
+            Book Now
           </a>
-          <a href="#video-gallery" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
-            <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
-            Video Gallery
-          </a>
-          <a href="#office-tour" className="relative text-xl w-64 px-14 py-4 rounded-md hover:bg-[#c5a46d] text-left">
-            <span className="absolute left-1 top-0 bottom-0 w-1 rounded-md bg-[#c5a46d]"></span>
-            Office Tour
-          </a> */}
         </>
       )}
     </div>
